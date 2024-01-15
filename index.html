@@ -31,11 +31,11 @@
     />
 
     <!-- Favicons -->
-    <link
+    <!-- <link
       rel="apple-touch-icon"
       href="/docs/5.3/assets/img/favicons/apple-touch-icon.png"
       sizes="180x180"
-    />
+    /> -->
     <link
       rel="icon"
       href="/docs/5.3/assets/img/favicons/favicon-32x32.png"
@@ -112,20 +112,20 @@
       }
 
       .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
+        --bd-violet-bg: #bd9f3f;
         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
         --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
+        --bs-btn-color: var(--bs-black);
         --bs-btn-bg: var(--bd-violet-bg);
         --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-hover-color: var(--bs-black);
+        --bs-btn-hover-bg: #dab333;
+        --bs-btn-hover-border-color: #dab333;
         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #C29917;
+        --bs-btn-active-border-color: #C29917;
       }
 
       .bd-mode-toggle {
@@ -139,6 +139,7 @@
 
     <!-- Custom styles for this template -->
     <link href="navbars-offcanvas.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles.scss">
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -326,9 +327,13 @@
         </div>
       </nav> -->
 
-      <nav class="navbar bg-body-secondary" aria-label="Light offcanvas navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">DW Logo</a>
+      <nav class="navbar" aria-label="Light offcanvas navbar">
+        <div class="container">
+          
+          <a class="navbar-brand mx-auto" href="#">
+            <img src="src/img/DWLogo.png" alt="Denise Watt Logo" width="300" height="auto">
+          </a> 
+          
           <button
             class="navbar-toggler"
             type="button"
@@ -394,11 +399,11 @@
                 <input
                   class="form-control me-2"
                   type="search"
-                  placeholder="Search"
-                  aria-label="Search"
+                  placeholder="Login here"
+                  aria-label="Login"
                 />
                 <button class="btn btn-outline-success" type="submit">
-                  Search
+                  Login
                 </button>
               </form>
             </div>
@@ -411,9 +416,9 @@
         aria-label="Offcanvas navbar large"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Responsive offcanvas navbar</a>
+          <!-- <a class="navbar-brand" href="#">second menu</a> -->
           <button
-            class="navbar-toggler"
+            class="navbar-toggler mx-auto"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar2"
@@ -423,7 +428,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="offcanvas offcanvas-end text-bg-dark"
+            class="offcanvas offcanvas-end"
             tabindex="-1"
             id="offcanvasNavbar2"
             aria-labelledby="offcanvasNavbar2Label"
@@ -432,7 +437,7 @@
               <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
               <button
                 type="button"
-                class="btn-close btn-close-white"
+                class="btn-close"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
@@ -445,43 +450,31 @@
                   >
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">One to One</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Retreats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Workshops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">50@50 Youtube</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
+                </li> -->
               </ul>
-              <form class="d-flex mt-3 mt-lg-0" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
+              
             </div>
           </div>
         </div>
@@ -511,6 +504,59 @@
         </div>
       </div>
     </main>
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-4 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              </ul>
+          </div>
+    
+          <div class="col-6 col-md-4 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Impressum</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              </ul>
+          </div>
+    
+          <div class="col-6 col-md-4 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            </ul>
+          </div>
+    
+          <!-- <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div> -->
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>&copy; Archie Productions  |  Iflingen  |  All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
